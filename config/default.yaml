@@ -1,0 +1,29 @@
+# Universal Web Scraper Configuration
+
+# Anti-detection settings
+anti_detection:
+  stealth: true
+  auto_match: true
+  random_user_agent: true
+  delay_range: [1, 3]  # seconds
+
+# Retry settings
+retry:
+  max_attempts: 3
+  backoff_factor: 2
+
+# Output settings
+output:
+  format: csv  # csv, json, excel
+  encoding: utf-8-sig
+  directory: output/
+
+# Logging
+logging:
+  level: INFO
+  file: logs/scraper.log
+
+# Rate limiting
+rate_limit:
+  requests_per_second: 2
+  concurrent_requests: 5
