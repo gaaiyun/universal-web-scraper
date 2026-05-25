@@ -225,21 +225,21 @@ class TestAsyncScraper:
     """测试异步爬虫"""
     
     @pytest.mark.asyncio
-    @patch('scrapling.Fetcher')
-    async def test_scrape_url(self, mock_fetcher_class):
-        """测试 URL 爬取"""
+    async def test_scrape_url(self):
+        """测试 URL 爬取（mock 整个 scrapling 模块）。"""
+        scrapling = pytest.importorskip("scrapling", reason="未装 scrapling 时跳过")
         from scripts.scraper import UniversalScraper
-        
-        # Mock fetcher
-        mock_fetcher = AsyncMock()
-        mock_fetcher.get = AsyncMock(return_value=Mock(text="<html><body>Test</body></html>"))
-        mock_fetcher_class.return_value = mock_fetcher
-        
-        scraper = UniversalScraper()
-        selectors = {'title': 'h1'}
-        result = await scraper.scrape_url('https://example.com', selectors)
-        
-        assert result is not None
+
+        with patch('scripts.scraper.Fetcher') as mock_fetcher_class:
+            mock_fetcher = AsyncMock()
+            mock_fetcher.get = AsyncMock(return_value=Mock(text="<html><body>Test</body></html>"))
+            mock_fetcher_class.return_value = mock_fetcher
+
+            scraper = UniversalScraper()
+            selectors = {'title': 'h1'}
+            result = await scraper.scrape_url('https://example.com', selectors)
+
+            assert result is not None
 
 
 if __name__ == '__main__':
