@@ -3,18 +3,18 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**通用网页爬虫 OpenClaw Skill - 展示数据爬取和处理能力**
+**通用网页爬虫框架 - 多站点数据采集与处理**
 
 基于 Scrapling 和 Crawlee-Python 的通用爬虫框架，支持多站点数据采集、智能反爬虫、数据清洗和多格式导出。
 
 ---
 
-## 🚀 快速开始
+## 快速开始
 
 ### 1. 安装依赖
 
 ```bash
-cd C:\Users\gaaiy\.openclaw\workspace\skills\universal-web-scraper
+cd universal-web-scraper
 pip install scrapling crawlee beautifulsoup4 pandas playwright
 playwright install
 ```
@@ -34,29 +34,29 @@ python scripts/scrape.py --adapter ecommerce --url "https://shop.example.com"
 
 ---
 
-## 📖 功能特性
+## 功能特性
 
 ### 智能爬虫引擎
-- ✅ **自适应解析** - 网站结构变化自动适配
-- ✅ **智能反爬虫** - 绕过 Cloudflare、验证码
-- ✅ **代理轮换** - 自动代理池管理
-- ✅ **并发爬取** - 高效多线程/异步
+- **自适应解析** - 网站结构变化自动适配
+- **智能反爬虫** - 绕过 Cloudflare、验证码
+- **代理轮换** - 自动代理池管理
+- **并发爬取** - 多线程/异步
 
 ### 多站点支持
-- ✅ **电商平台** - 商品信息、价格监控
-- ✅ **招聘网站** - 职位数据、薪资分析
-- ✅ **新闻媒体** - 文章采集、舆情监控
-- ✅ **社交媒体** - 用户数据、评论分析
+- **电商平台** - 商品信息、价格监控
+- **招聘网站** - 职位数据、薪资分析
+- **新闻媒体** - 文章采集、舆情监控
+- **社交媒体** - 用户数据、评论分析
 
 ### 数据处理
-- ✅ **数据清洗** - 去重、格式化、验证
-- ✅ **数据转换** - 结构化处理
-- ✅ **多格式导出** - CSV, JSON, Excel, Database
-- ✅ **增量更新** - 只爬取新数据
+- **数据清洗** - 去重、格式化、验证
+- **数据转换** - 结构化处理
+- **多格式导出** - CSV, JSON, Excel, Database
+- **增量更新** - 只爬取新数据
 
 ---
 
-## 📝 使用示例
+## 使用示例
 
 ### 示例 1: 爬取电商商品
 
@@ -99,7 +99,7 @@ results = scraper.scrape_batch(urls)
 
 ---
 
-## ⚙️ 配置说明
+## 配置说明
 
 ### 配置文件 (config/default.yaml)
 
@@ -135,7 +135,7 @@ DATABASE_URL=postgresql://user:pass@localhost/scraper
 
 ---
 
-## 🎯 适配器列表
+## 适配器列表
 
 ### 1. 电商适配器 (ecommerce)
 ```python
@@ -166,7 +166,7 @@ data = scraper.scrape(url, selectors={'title': 'h1', 'content': '.article'})
 
 ---
 
-## 📊 数据导出格式
+## 数据导出格式
 
 ### CSV 格式
 ```csv
@@ -193,7 +193,7 @@ Product 2,149.99,https://...
 
 ---
 
-## 🔧 高级功能
+## 高级功能
 
 ### 自定义适配器
 
@@ -232,11 +232,11 @@ new_items = scraper.scrape(url)  # 只返回新数据
 
 ---
 
-## 📁 项目结构
+## 项目结构
 
 ```
 universal-web-scraper/
-├── SKILL.md              # OpenClaw Skill 描述
+├── SKILL.md              # 能力说明文档
 ├── README.md             # 本文档
 ├── requirements.txt      # 依赖列表
 ├── scripts/
@@ -256,7 +256,7 @@ universal-web-scraper/
 
 ---
 
-## 🛡️ 反爬虫策略
+## 反爬虫策略
 
 ### 1. User-Agent 轮换
 ```python
@@ -280,26 +280,26 @@ scraper = UniversalScraper(render_js=True, headless=True)
 
 ---
 
-## 🎓 展示价值
+## 能力概览
 
-### 数据爬取能力 ⭐⭐⭐⭐⭐
+### 数据爬取
 - 多站点支持
-- 智能反爬虫
-- 高效并发
+- 反爬虫处理
+- 并发爬取
 
-### 数据处理能力 ⭐⭐⭐⭐⭐
+### 数据处理
 - 数据清洗
 - 格式转换
 - 质量验证
 
-### 工程能力 ⭐⭐⭐⭐⭐
+### 工程结构
 - 模块化设计
 - 可扩展架构
-- 完整文档
+- 文档完整
 
 ---
 
-## 🔧 故障排除
+## 故障排除
 
 ### 常见问题
 
@@ -329,17 +329,16 @@ A: 加强反爬虫措施
 
 ---
 
-## 📄 许可证
+## 许可证
 
 MIT License
 
 ---
 
-## ⚠️ 免责声明
+## 免责声明
 
 本工具仅供学习和研究目的。使用时请遵守目标网站的 robots.txt 和服务条款。
 
 ---
 
 _基于 [Scrapling](https://github.com/D4Vinci/Scrapling) 和 [Crawlee-Python](https://github.com/apify/crawlee-python) 开发_
-_OpenClaw Skill 封装版本_

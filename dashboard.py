@@ -15,16 +15,15 @@ import time
 # 页面配置
 st.set_page_config(
     page_title="Universal Web Scraper",
-    page_icon="🕷️",
     layout="wide"
 )
 
 # 标题
-st.title("🕷️ Universal Web Scraper Dashboard")
+st.title("Universal Web Scraper Dashboard")
 st.markdown("---")
 
 # 侧边栏
-st.sidebar.header("⚙️ 爬虫配置")
+st.sidebar.header("爬虫配置")
 
 # 选择爬虫类型
 scraper_type = st.sidebar.selectbox(
@@ -46,7 +45,7 @@ extract_text = st.sidebar.checkbox("提取正文", value=True)
 max_pages = st.sidebar.slider("最大页数", 1, 100, 5)
 
 # 开始按钮
-if st.sidebar.button("🚀 开始爬取", type="primary"):
+if st.sidebar.button("开始爬取", type="primary"):
     st.sidebar.success("爬取开始！")
     
     # 模拟爬取过程
@@ -58,14 +57,14 @@ if st.sidebar.button("🚀 开始爬取", type="primary"):
         progress_bar.progress(i + 1)
         status_text.text(f"爬取中... {i+1}%")
     
-    status_text.text("✅ 爬取完成！")
+    status_text.text("爬取完成！")
 
 # 主界面
-tab1, tab2, tab3, tab4 = st.tabs(["📊 结果预览", "📝 原始数据", "📈 统计信息", "💾 导出"])
+tab1, tab2, tab3, tab4 = st.tabs(["结果预览", "原始数据", "统计信息", "导出"])
 
 # Tab 1: 结果预览
 with tab1:
-    st.header("📊 爬取结果预览")
+    st.header("爬取结果预览")
     
     # 模拟数据
     sample_data = {
@@ -86,7 +85,7 @@ with tab1:
     st.dataframe(df, use_container_width=True)
     
     # 搜索结果
-    st.subheader("🔍 搜索")
+    st.subheader("搜索")
     search_query = st.text_input("搜索关键词")
     if search_query:
         filtered = df[df['标题'].str.contains(search_query, case=False)]
@@ -95,7 +94,7 @@ with tab1:
 
 # Tab 2: 原始数据
 with tab2:
-    st.header("📝 原始 HTML 数据")
+    st.header("原始 HTML 数据")
     
     sample_html = """
     <html>
@@ -117,7 +116,7 @@ with tab2:
 
 # Tab 3: 统计信息
 with tab3:
-    st.header("📈 爬取统计")
+    st.header("爬取统计")
     
     col1, col2, col3, col4 = st.columns(4)
     
@@ -151,37 +150,37 @@ with tab3:
 
 # Tab 4: 导出
 with tab4:
-    st.header("💾 导出数据")
+    st.header("导出数据")
     
     st.subheader("选择导出格式")
     
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        if st.button("📄 导出 CSV", use_container_width=True):
+        if st.button("导出 CSV", use_container_width=True):
             st.success("CSV 文件已生成！")
             st.download_button(
-                label="⬇️ 下载 CSV",
+                label="下载 CSV",
                 data=df.to_csv(index=False),
                 file_name=f"scraper_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
                 mime="text/csv"
             )
     
     with col2:
-        if st.button("📊 导出 Excel", use_container_width=True):
+        if st.button("导出 Excel", use_container_width=True):
             st.success("Excel 文件已生成！")
             st.download_button(
-                label="⬇️ 下载 Excel",
+                label="下载 Excel",
                 data=df.to_csv(index=False),
                 file_name=f"scraper_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             )
     
     with col3:
-        if st.button("📋 导出 JSON", use_container_width=True):
+        if st.button("导出 JSON", use_container_width=True):
             st.success("JSON 文件已生成！")
             st.download_button(
-                label="⬇️ 下载 JSON",
+                label="下载 JSON",
                 data=df.to_json(orient='records'),
                 file_name=f"scraper_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
                 mime="application/json"
@@ -199,6 +198,6 @@ st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: gray;'>
     <p>Universal Web Scraper | Powered by Streamlit</p>
-    <p>📝 支持：通用网页 | 新闻网站 | 电商网站 | 招聘网站</p>
+    <p>支持：通用网页 | 新闻网站 | 电商网站 | 招聘网站</p>
 </div>
 """, unsafe_allow_html=True)

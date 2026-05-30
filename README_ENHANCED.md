@@ -1,26 +1,26 @@
 # Universal Web Scraper
 
-🕷️ **通用网页爬虫框架 - 数据爬取神器**
+**通用网页爬虫框架**
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
 
-## 📋 项目概述
+## 项目概述
 
 Universal Web Scraper 是一个**通用网页爬虫框架**，支持多种网站类型的结构化数据提取。适用于数据采集、市场分析、竞品监控等场景。
 
 **核心特点**：
-- 🕷️ **多适配器** - 新闻/电商/招聘/博客网站
-- 📊 **结构化输出** - CSV/JSON/Excel
-- 🎨 **Streamlit UI** - 交互式爬虫界面
-- 🔧 **可扩展** - 轻松添加新适配器
-- 🚀 **批量爬取** - 支持多页面并发
+- **多适配器** - 新闻/电商/招聘/博客网站
+- **结构化输出** - CSV/JSON/Excel
+- **Streamlit UI** - 交互式爬虫界面
+- **可扩展** - 轻松添加新适配器
+- **批量爬取** - 支持多页面并发
 
 ---
 
-## 🚀 快速开始
+## 快速开始
 
 ### 安装
 
@@ -48,7 +48,7 @@ streamlit run dashboard.py
 
 ---
 
-## 📁 项目结构
+## 项目结构
 
 ```
 Universal-Web-Scraper/
@@ -62,16 +62,16 @@ Universal-Web-Scraper/
 │   ├── scraper.py        # 主爬虫
 │   ├── batch_scraper.py  # 批量爬取
 │   └── data_cleaner.py   # 数据清洗
-├── templates/            # 高级模板 ⭐ 新增
+├── templates/            # 高级模板
 │   └── advanced_templates.py
-├── dashboard.py          # ⭐ Streamlit 界面
+├── dashboard.py          # Streamlit 界面
 ├── requirements.txt      # 依赖
 └── README.md             # 本文档
 ```
 
 ---
 
-## 🎯 使用场景
+## 使用场景
 
 | 场景 | 适配器 | 输出字段 |
 |------|--------|----------|
@@ -82,7 +82,7 @@ Universal-Web-Scraper/
 
 ---
 
-## 💡 高级功能
+## 高级功能
 
 ### 1. 批量爬取
 
@@ -116,20 +116,20 @@ class CustomAdapter(BaseAdapter):
 
 ---
 
-## 📊 Streamlit Dashboard
+## Streamlit Dashboard
 
 ### 功能
-- 📝 URL 输入配置
-- 🔍 实时爬取预览
-- 📈 统计信息展示
-- 💾 多格式导出（CSV/JSON/Excel）
+- URL 输入配置
+- 实时爬取预览
+- 统计信息展示
+- 多格式导出（CSV/JSON/Excel）
 
 ### 截图
 运行 `streamlit run dashboard.py` 查看
 
 ---
 
-## ⚠️ 注意事项
+## 注意事项
 
 1. **遵守 robots.txt** - 尊重网站爬虫协议
 2. **请求频率** - 添加延迟，避免被封
@@ -138,7 +138,7 @@ class CustomAdapter(BaseAdapter):
 
 ---
 
-## 📚 相关资源
+## 相关资源
 
 - [BeautifulSoup 文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 - [Requests 文档](https://docs.python-requests.org/)
@@ -146,12 +146,12 @@ class CustomAdapter(BaseAdapter):
 
 ---
 
-## 📝 更新日志
+## 更新日志
 
 ### 2026-03-02
-- ✅ 添加 Streamlit Dashboard
-- ✅ 添加高级爬虫模板
-- ✅ 支持 4 种网站类型
+- 添加 Streamlit Dashboard
+- 添加高级爬虫模板
+- 支持 4 种网站类型
 
 ---
 
