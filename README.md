@@ -3,7 +3,7 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**通用网页爬虫 OpenClaw Skill - 展示数据爬取和处理能力**
+**通用网页爬虫框架 - 多站点数据采集与处理**
 
 基于 Scrapling 和 Crawlee-Python 的通用爬虫框架，支持多站点数据采集、智能反爬虫、数据清洗和多格式导出。
 
@@ -14,7 +14,7 @@
 ### 1. 安装依赖
 
 ```bash
-cd C:\Users\gaaiy\.openclaw\workspace\skills\universal-web-scraper
+cd universal-web-scraper
 pip install scrapling crawlee beautifulsoup4 pandas playwright
 playwright install
 ```
@@ -236,7 +236,7 @@ new_items = scraper.scrape(url)  # 只返回新数据
 
 ```
 universal-web-scraper/
-├── SKILL.md              # OpenClaw Skill 描述
+├── SKILL.md              # 能力说明文档
 ├── README.md             # 本文档
 ├── requirements.txt      # 依赖列表
 ├── scripts/
@@ -342,4 +342,3 @@ MIT License
 ---
 
 _基于 [Scrapling](https://github.com/D4Vinci/Scrapling) 和 [Crawlee-Python](https://github.com/apify/crawlee-python) 开发_
-_OpenClaw Skill 封装版本_

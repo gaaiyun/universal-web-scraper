@@ -1,6 +1,6 @@
 ---
 name: universal-web-scraper
-description: Universal web scraping framework for OpenClaw. Multi-site support, intelligent anti-bot, data cleaning and export. Perfect for showcasing data collection skills.
+description: Universal web scraping framework. Multi-site support, intelligent anti-bot, data cleaning and export.
 ---
 
 # Universal Web Scraper Skill
@@ -62,11 +62,9 @@ jobs = scraper.scrape('https://jobs.example.com')
 scraper.export(products, 'products.csv', format='csv')
 ```
 
-### OpenClaw 调用
-```python
-# 在 OpenClaw 中自动触发
+### 典型调用流程
+```text
 用户："帮我爬取这个网站的商品信息"
-→ 自动调用 universal-web-scraper
 → 选择合适的适配器
 → 爬取并清洗数据
 → 导出结果
@@ -182,10 +180,9 @@ playwright install
 - **数据不完整**: 验证选择器和适配器
 - **被封禁**: 加强反爬虫措施
 
-### 日志位置
-- `~/.openclaw/workspace/logs/scraper.log`
+### 日志
+- 默认通过标准 `logging` 输出到控制台（stderr）
 
 ---
 
 _基于 Scrapling 和 Crawlee-Python 开发_
-_OpenClaw Skill 封装版本_
